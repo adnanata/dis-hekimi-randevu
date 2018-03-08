@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using testauth.Models;
+using Randevu.Models;
 
-namespace testauth.Data
+namespace Randevu.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

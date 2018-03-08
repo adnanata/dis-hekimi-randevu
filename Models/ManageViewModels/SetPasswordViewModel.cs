@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace testauth.Models.ManageViewModels
+namespace Randevu.Models.ManageViewModels
 {
     public class SetPasswordViewModel
     {

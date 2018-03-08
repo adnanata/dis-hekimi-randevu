@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace testauth.Data.Migrations
+namespace Randevu.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

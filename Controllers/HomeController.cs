@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using testauth.Models;
+using Randevu.Models;
 
-namespace testauth.Controllers
+namespace Randevu.Controllers
 {
     public class HomeController : Controller
     {

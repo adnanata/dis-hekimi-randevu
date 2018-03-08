@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using testauth.Services;
+using Randevu.Services;
 
-namespace testauth.Services
+namespace Randevu.Services
 {
     public static class EmailSenderExtensions
     {

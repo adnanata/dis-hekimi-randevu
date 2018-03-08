@@ -10,11 +10,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using testauth.Models;
-using testauth.Models.ManageViewModels;
-using testauth.Services;
+using Randevu.Models;
+using Randevu.Models.ManageViewModels;
+using Randevu.Services;
 
-namespace testauth.Controllers
+namespace Randevu.Controllers
 {
     [Authorize]
     [Route("[controller]/[action]")]

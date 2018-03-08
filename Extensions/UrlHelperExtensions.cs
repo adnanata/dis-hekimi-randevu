@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using testauth.Controllers;
+using Randevu.Controllers;
 
 namespace Microsoft.AspNetCore.Mvc
 {

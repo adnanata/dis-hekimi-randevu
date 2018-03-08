@@ -1,6 +1,6 @@
 using System;
 
-namespace testauth.Models
+namespace Randevu.Models
 {
     public class ErrorViewModel
     {

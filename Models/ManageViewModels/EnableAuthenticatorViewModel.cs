@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace testauth.Models.ManageViewModels
+namespace Randevu.Models.ManageViewModels
 {
     public class EnableAuthenticatorViewModel
     {
