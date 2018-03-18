@@ -208,8 +208,7 @@ namespace Randevu.Controllers
         [AllowAnonymous]
         public IActionResult Register(string returnUrl = null)
         {
-            ViewData["ReturnUrl"] = returnUrl;
-            return View();
+            return Unauthorized();
         }
 
         [HttpPost]

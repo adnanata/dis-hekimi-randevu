@@ -4,13 +4,30 @@
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
 
-<ul class="nav nav-pills nav-stacked">
-    <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Profile</a></li>
-    <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Password</a></li>
-    @if (hasExternalLogins)
-    {
-        <li class="@ManageNavPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">External logins</a></li>
-    }
-    <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"><a asp-action="TwoFactorAuthentication">Two-factor authentication</a></li>
-</ul>
-
+ <div id="sidebar" class="well sidebar-nav">
+    <h5>
+        <i class="glyphicon glyphicon-home"></i> <small><b>Güvenlik</b></small>
+    </h5>
+    <ul class="nav nav-pills nav-stacked">
+        <li class="@ManageNavPages.IndexNavClass(ViewContext)"><a asp-action="Index">Kişsel Ayarlar</a></li>
+        <li class="@ManageNavPages.ChangePasswordNavClass(ViewContext)"><a asp-action="ChangePassword">Şifrenizi değiştirin</a></li>
+        @if (hasExternalLogins)
+        {
+            <li class="@ManageNavPages.ExternalLoginsNavClass(ViewContext)"><a asp-action="ExternalLogins">Diğer oturumlar</a></li>
+        }
+        <li class="@ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)"><a asp-action="TwoFactorAuthentication">2 Adımda oturum güvenliği</a></li>            
+    </ul>
+    <h5><i class="glyphicon glyphicon-user"></i>
+        <small><b>Çalışanlar</b></small>
+    </h5>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Listele</a></li>
+        <li><a href="#">Yeni Çalışan</a></li>
+    </ul>
+    <h5><i class="glyphicon glyphicon-user"></i>
+        <small><b>Randevular</b></small>
+    </h5>
+    <ul class="nav nav-pills nav-stacked">
+        <li><a href="#">Listele</a></li>
+    </ul>
+</div>

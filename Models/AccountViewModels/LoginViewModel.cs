@@ -10,13 +10,15 @@ namespace Randevu.Models.AccountViewModels
     {
         [Required]
         [EmailAddress]
+        [Display(Name = "Kullanıcı Adı")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
+        [Display(Name = "Şifreniz")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Bu bilgisayarda oturumu açık tut")]
         public bool RememberMe { get; set; }
     }
 }
