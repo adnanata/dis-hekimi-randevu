@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Randevu.Models
 {
@@ -10,4 +11,5 @@ namespace Randevu.Models
     public class ApplicationUser : IdentityUser
     {
     }
+ 
 }

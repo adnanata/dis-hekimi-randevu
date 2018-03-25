@@ -18,6 +18,10 @@ namespace testauth.Views.Manage
         public static string ExternalLogins => "ExternalLogins";
 
         public static string TwoFactorAuthentication => "TwoFactorAuthentication";
+        
+        
+        public static string Employees => "Employees";
+                
 
         public static string IndexNavClass(ViewContext viewContext) => PageNavClass(viewContext, Index);
 
@@ -25,6 +29,11 @@ namespace testauth.Views.Manage
 
         public static string ExternalLoginsNavClass(ViewContext viewContext) => PageNavClass(viewContext, ExternalLogins);
 
+        public static string EmployeeCreateNavClass(ViewContext viewContext) => PageNavClass(viewContext, Employees);
+        
+        public static string EmployeesNavClass(ViewContext viewContext) => PageNavClass(viewContext, Employees);
+        
+        
         public static string TwoFactorAuthenticationNavClass(ViewContext viewContext) => PageNavClass(viewContext, TwoFactorAuthentication);
     
         public static string PageNavClass(ViewContext viewContext, string page)

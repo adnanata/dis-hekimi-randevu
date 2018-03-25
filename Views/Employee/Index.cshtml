@@ -1,0 +1,37 @@
+﻿@using testauth.Views.Manage
+@{
+    ViewData["Title"] = "Çalışanlar";
+    var employees =  ViewData["employees"];
+    ViewData.AddActivePage(ManageNavPages.Index);
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Adı</th>
+                    <th>Soyado</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var o in employees)
+            {
+                <tr>
+                    <td>@o.Name</td>
+                    <td>@o.Surname</td>
+                    <td>@o.Phone</td>
+                </tr>
+            }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
