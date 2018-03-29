@@ -27,8 +27,8 @@ namespace Randevu.Controllers
         [Route("")]
         public IActionResult Index()
         {  
-            ViewData["employees"] = this._appDbContext.Employees.ToList(); 
-            return View(ViewData);
+            var model = this._appDbContext.Employees.ToList(); 
+            return View(model);
         }
         
         [Route("create")]
@@ -42,7 +42,17 @@ namespace Randevu.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    this._appDbContext.Employees.Add(new Employee { Name = model.Name, Surname = model.Surname, PhoneNumber = model.Phone, User = user});
+                    /*
+                    var employee = new Employee
+                    {
+                        Name = model.Name,
+                        Surname = model.Surname,
+                        PhoneNumber = model.Phone,
+                        User = user
+                    };
+                    
+                    this._appDbContext.Employees.Add(employee);
+                    this._appDbContext.SaveChanges();*/
                 }
                 AddErrors(result);
             }

@@ -1,7 +1,8 @@
 ﻿@using testauth.Views.Manage
+@model IEnumerable<Employee>
+
 @{
     ViewData["Title"] = "Çalışanlar";
-    var employees =  ViewData["employees"];
     ViewData.AddActivePage(ManageNavPages.Index);
 }
 
@@ -18,12 +19,12 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach (var o in employees)
+            @foreach (var o in Model)
             {
                 <tr>
                     <td>@o.Name</td>
                     <td>@o.Surname</td>
-                    <td>@o.Phone</td>
+                    <td>@o.PhoneNumber</td>
                 </tr>
             }
 

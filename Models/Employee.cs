@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Identity;
 
 namespace Randevu.Models
 {
     public class Employee
     {
+        [Key]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string PhoneNumber { get; set; }
+        
+        [DataType(DataType.Date)]
+        public DateTime StartOfWork { get; set; }
+        
         public ApplicationUser User { get; set; }
     }
 }

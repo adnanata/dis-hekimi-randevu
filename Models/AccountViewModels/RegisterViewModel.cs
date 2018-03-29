@@ -8,17 +8,10 @@ namespace Randevu.Models.AccountViewModels
 {
     public class RegisterViewModel
     {
-        [Required]
-        [Display(Name = "Adı")]
-        public string Name { get; set; }
         
         [Required]
-        [Display(Name = "Soyadı")]
-        public string Surname { get; set; }
-   
-        [Required]
-        [Display(Name = "Telefon")]
-        public string Phone { get; set; }
+        [Display(Name = "TC")]
+        public string Tc { get; set; }
         
         [Required]
         [EmailAddress]
@@ -35,5 +28,9 @@ namespace Randevu.Models.AccountViewModels
         [Display(Name = "Şifreyi Onaylayın")]
         [Compare("Password", ErrorMessage = "Şifreler Uyuşmuyor.")]
         public string ConfirmPassword { get; set; }
+        
+        [Required]
+        [Display(Name = "Telefon")]
+        public string Phone { get; set; }
     }
 }
